@@ -1,11 +1,14 @@
 import React from 'react';
-import {View, Text, Touchable, TouchableOpacity} from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import Background from './Background';
 import LoginButton from './LoginButton';
-import { darkBlack, lightDarkGrey} from './Constants';
+import { darkBlack, lightDarkGrey } from './Constants';
 import Field from './Field';
 
 const Login = () => {
+    const navigation = useNavigation();
+
     return (
         <Background>
             <View style={{ alignItems: 'center', width: 400 }}>
@@ -92,7 +95,7 @@ const Login = () => {
                         }}
                         >Don't have an account?
                         </Text>
-                        <TouchableOpacity onPress={() => props.navigation.navigate("Signup")}>
+                        <TouchableOpacity onPress={() => navigation.navigate("Signup")}>
                             <Text style={{
                                 color: lightDarkGrey,
                                 fontWeight: 'bold',
