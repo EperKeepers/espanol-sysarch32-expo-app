@@ -113,7 +113,7 @@ const Signup = (props) => {
                         bgColor={darkGreen}
                         btnLabel="Signup"
                         Press={() => {
-                            alert('Accoutn created');
+                            alert('Account created');
                             props.navigation.navigate('Login');
                         }}
                     />
